@@ -513,8 +513,23 @@ grid-template-columns:1fr;
 }
 
 
+/* Hamburger oculto no desktop */
 .hamburger{
 display:none !important;
+visibility:hidden !important;
+opacity:0 !important;
+pointer-events:none !important;
+}
+
+/* Hamburger somente no mobile */
+@media screen and (max-width:700px){
+.hamburger{
+display:flex !important;
+visibility:visible !important;
+opacity:1 !important;
+pointer-events:auto !important;
+align-items:center;
+justify-content:center;
 font-size:220px;
 font-weight:300;
 cursor:pointer;
@@ -522,9 +537,7 @@ color:#d49795;
 padding:4px 8px;
 line-height:1;
 }
-
-@media(max-width:700px){
-.hamburger{display:block !important;}
+}
 
 .menu{
 display:none;
@@ -546,6 +559,16 @@ backdrop-filter:blur(28px);
 -webkit-backdrop-filter:blur(28px);
 }
 
+}
+
+
+@media screen and (min-width:701px){
+.hamburger{
+display:none !important;
+visibility:hidden !important;
+opacity:0 !important;
+pointer-events:none !important;
+}
 }
 
 </style>
