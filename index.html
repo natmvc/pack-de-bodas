@@ -515,7 +515,7 @@ grid-template-columns:1fr;
 
 .hamburger{
 display:none;
-font-size:96px;
+font-size:144px;
 font-weight:300;
 cursor:pointer;
 color:#d49795;
@@ -881,6 +881,44 @@ e.key === 'F12' ||
 ){
 e.preventDefault();
 }
+});
+</script>
+
+
+<script>
+// Bloqueia seleção de texto
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+
+// Detecção simples de DevTools
+(function(){
+setInterval(function(){
+const threshold = 160;
+if(
+window.outerWidth - window.innerWidth > threshold ||
+window.outerHeight - window.innerHeight > threshold
+){
+document.body.innerHTML='';
+document.body.style.background='#fff';
+}
+},1000);
+})();
+
+// Proteções mobile
+document.addEventListener('touchstart', function(e){
+if(e.touches.length > 1){
+e.preventDefault();
+}
+},{passive:false});
+
+document.addEventListener('gesturestart', function(e){
+e.preventDefault();
+});
+
+document.querySelectorAll('img').forEach(img=>{
+img.style.pointerEvents='none';
+img.style.webkitTouchCallout='none';
+img.setAttribute('oncontextmenu','return false');
 });
 </script>
 
