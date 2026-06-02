@@ -515,7 +515,7 @@ grid-template-columns:1fr;
 
 .hamburger{
 display:none;
-font-size:56px;
+font-size:72px;
 font-weight:300;
 cursor:pointer;
 color:#d49795;
@@ -849,6 +849,28 @@ function toggleMenu(){
 document.querySelector('.menu').classList.toggle('active');
 }
 </script>
+
+<script>
+// Bloqueia clique direito
+document.addEventListener('contextmenu', function(e){
+e.preventDefault();
+});
+
+// Bloqueia arrastar imagens
+document.addEventListener('dragstart', function(e){
+if(e.target.tagName === 'IMG'){
+e.preventDefault();
+}
+});
+
+// Bloqueia salvar por toque longo em alguns navegadores
+document.querySelectorAll('img').forEach(img=>{
+img.setAttribute('draggable','false');
+img.style.webkitUserDrag='none';
+img.style.userSelect='none';
+});
+</script>
+
 </body>
 
 </html>
