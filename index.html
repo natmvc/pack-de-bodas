@@ -38,7 +38,9 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-background:#fcf7f5;
+background:rgba(252,247,245,.88);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
 color:#2c2c2c;
 overflow-x:hidden;
 }
@@ -512,9 +514,12 @@ grid-template-columns:1fr;
 
 .hamburger{
 display:none;
-font-size:32px;
+font-size:42px;
+font-weight:300;
 cursor:pointer;
 color:#d49795;
+padding:4px 8px;
+line-height:1;
 }
 
 @media(max-width:700px){
