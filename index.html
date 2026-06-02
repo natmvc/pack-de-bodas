@@ -513,39 +513,36 @@ grid-template-columns:1fr;
 }
 
 
-/* Hamburger oculto no desktop */
-.hamburger{
-display:none !important;
-visibility:hidden !important;
-opacity:0 !important;
-pointer-events:none !important;
 }
 
-/* Hamburger somente no mobile */
-@media screen and (max-width:700px){
+
+/* ===== MENU CORRIGIDO ===== */
+
+/* Desktop */
 .hamburger{
-display:flex !important;
-visibility:visible !important;
-opacity:1 !important;
-pointer-events:auto !important;
-align-items:center;
-justify-content:center;
-font-size:220px;
-font-weight:300;
+display:none;
+}
+
+/* Mobile */
+@media screen and (max-width:700px){
+
+.hamburger{
+display:block !important;
+font-size:42px !important;
 cursor:pointer;
 color:#d49795;
-padding:4px 8px;
 line-height:1;
-}
 }
 
 .menu{
-display:none;
+display:none !important;
 position:absolute;
 top:82px;
 left:0;
 width:100%;
-background:#fcf7f5;
+background:rgba(252,247,245,.95);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
 padding:20px;
 flex-direction:column;
 gap:18px;
@@ -553,22 +550,25 @@ border-top:1px solid rgba(0,0,0,.05);
 }
 
 .menu.active{
-display:flex;
-background:rgba(252,247,245,.92);
-backdrop-filter:blur(28px);
--webkit-backdrop-filter:blur(28px);
+display:flex !important;
 }
 
 }
 
-
+/* Desktop explícito */
 @media screen and (min-width:701px){
+
 .hamburger{
 display:none !important;
-visibility:hidden !important;
-opacity:0 !important;
-pointer-events:none !important;
 }
+
+.menu{
+display:flex !important;
+position:static;
+width:auto;
+padding:0;
+}
+
 }
 
 </style>
