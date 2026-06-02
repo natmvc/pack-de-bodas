@@ -162,25 +162,31 @@ margin:0;
 }
 
 .fan{
-position:relative;
-height:760px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+align-items:center;
 }
 
 .fan img{
-width:210px;
-position:absolute;
-top:50%;
-left:50%;
-transform-origin:bottom center;
+width:100%;
+position:relative;
 border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
-transition:.4s;
+box-shadow:0 20px 60px rgba(0,0,0,.12);
+transition:.35s;
 background:white;
 }
 
+.fan img:nth-child(odd){
+transform:rotate(-3deg);
+}
+
+.fan img:nth-child(even){
+transform:rotate(3deg);
+}
+
 .fan img:hover{
-transform:scale(1.05)!important;
-z-index:999;
+transform:translateY(-6px) scale(1.02);
 }
 
 .pricing{
@@ -362,11 +368,7 @@ font-size:4.5rem;
 }
 
 .fan{
-height:550px;
-}
-
-.fan img{
-width:150px;
+grid-template-columns:repeat(2,1fr);
 }
 
 .pricing-box{
@@ -483,50 +485,18 @@ Um pack completo de papelaria digital para mini bodas mensais com placas decorat
 
 <div class="fan">
 
-<img src="beijinho.jpg" style="transform:translate(-50%,-50%) rotate(-40deg); z-index:1;">
-<img src="sorvete.jpg" style="transform:translate(-50%,-50%) rotate(-32deg); z-index:2;">
-<img src="algodao.jpg" style="transform:translate(-50%,-50%) rotate(-24deg); z-index:3;">
-<img src="pipoca.jpg" style="transform:translate(-50%,-50%) rotate(-16deg); z-index:4;">
-<img src="chocolate.jpg" style="transform:translate(-50%,-50%) rotate(-8deg); z-index:5;">
-<img src="plumas.jpg" style="transform:translate(-50%,-50%) rotate(0deg); z-index:6;">
-<img src="purpurina.jpg" style="transform:translate(-50%,-50%) rotate(8deg); z-index:7;">
-<img src="pompons.jpg" style="transform:translate(-50%,-50%) rotate(16deg); z-index:8;">
-<img src="maternidade.jpg" style="transform:translate(-50%,-50%) rotate(24deg); z-index:9;">
-<img src="pintinhos.jpg" style="transform:translate(-50%,-50%) rotate(32deg); z-index:10;">
-<img src="chiclete.jpg" style="transform:translate(-50%,-50%) rotate(40deg); z-index:11;">
-<img src="papel.jpg" style="transform:translate(-50%,-50%) rotate(48deg); z-index:12;">
-
-</div>
-
-</div>
-
-</section>
-
-<section class="pricing" id="pack">
-
-<div class="container">
-
-<div class="pricing-box">
-
-<div>
-
-<h2>Pack Completo</h2>
-
-<div class="price">
-R$ 19,90
-</div>
-
-<p>
-12 meses de papelaria • arquivos digitais • acesso imediato
-</p>
-
-</div>
-
-<div>
-
-<a class="btn" href="https://pay.kiwify.com.br/4BMNxVg" target="_blank">
-QUERO O PACK COMPLETO
-</a>
+<img src="beijinho.jpg">
+<img src="sorvete.jpg">
+<img src="algodao.jpg">
+<img src="pipoca.jpg">
+<img src="chocolate.jpg">
+<img src="plumas.jpg">
+<img src="purpurina.jpg">
+<img src="pompons.jpg">
+<img src="maternidade.jpg">
+<img src="pintinhos.jpg">
+<img src="chiclete.jpg">
+<img src="papel.jpg">
 
 </div>
 
